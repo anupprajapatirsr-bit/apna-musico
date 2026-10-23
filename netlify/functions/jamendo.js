@@ -83,7 +83,7 @@ exports.handler = async (event) => {
       t.id &&
       t.audio &&
       /^https:\/\//i.test(t.audio) &&
-      /^https:\/\//i.test(t.license)
+      /^https?:\/\//i.test(t.license)
     );
 
     return reply(200, { configured: true, results });
